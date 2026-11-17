@@ -1,0 +1,40 @@
+{
+  "indexes": [],
+  "fieldOverrides": [
+    {
+      "collectionGroup": "studio_tasks",
+      "fieldPath": "description",
+      "indexes": []
+    },
+    {
+      "collectionGroup": "studio_tasks",
+      "fieldPath": "attachments",
+      "indexes": []
+    },
+    {
+      "collectionGroup": "studio_tasks",
+      "fieldPath": "comments",
+      "indexes": []
+    },
+    {
+      "collectionGroup": "studio_tasks",
+      "fieldPath": "revisions",
+      "indexes": []
+    },
+    {
+      "collectionGroup": "studio_tasks",
+      "fieldPath": "sprintMovements",
+      "indexes": []
+    },
+    {
+      "collectionGroup": "studio_activity_logs",
+      "fieldPath": "details",
+      "indexes": []
+    },
+    {
+      "collectionGroup": "studio_audit_logs",
+      "fieldPath": "details",
+      "indexes": []
+    }
+  ]
+}

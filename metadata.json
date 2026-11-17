@@ -1,0 +1,6 @@
+{
+  "name": "RG ArtFlow",
+  "description": "RG ArtFlow - Art Production & Capacity Management System for game studio art departments with sprint planning, capacity tracking, delivery forecasting, and company request portal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

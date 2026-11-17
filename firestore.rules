@@ -1,0 +1,27 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Studio users collection: authenticate and persist user profiles
+    match /studio_users/{userId} {
+      allow read: if true;
+      allow create: if true; // allow new staff to register
+      allow update, delete: if true; // leadership approval and permission assignment
+    }
+
+    // Studio mails & verification inbox
+    match /studio_mails/{mailId} {
+      allow read, write: if true;
+    }
+
+    // Firebase Extension Trigger Email collection (https://extensions.dev/extensions/firebase/firestore-send-email)
+    match /mail/{mailId} {
+      allow read, write: if true;
+    }
+
+    // Default match rule for other studio entities
+    match /{document=**} {
+      allow read, write: if true;
+    }
+  }
+}
+

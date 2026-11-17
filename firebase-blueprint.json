@@ -1,0 +1,69 @@
+{
+  "entities": {
+    "StudioUser": {
+      "title": "StudioUser",
+      "description": "Studio team member user profile with authentication and role access permissions",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "officeId": { "type": "string" },
+        "role": { "type": "string", "enum": ["ADMIN", "ART_DIRECTOR", "ART_MANAGER", "ARTIST", "COMPANY_REQUESTER"] },
+        "department": { "type": "string" },
+        "title": { "type": "string" },
+        "status": { "type": "string", "enum": ["ACTIVE", "PENDING_APPROVAL", "REJECTED"] },
+        "verificationCode": { "type": "string" },
+        "isVerified": { "type": "boolean" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "name", "email", "role"]
+    },
+    "StudioMail": {
+      "title": "StudioMail",
+      "description": "Email notifications and verification dispatch records",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "toEmail": { "type": "string", "format": "email" },
+        "toName": { "type": "string" },
+        "fromName": { "type": "string" },
+        "fromEmail": { "type": "string", "format": "email" },
+        "subject": { "type": "string" },
+        "body": { "type": "string" },
+        "type": { "type": "string" },
+        "verificationCode": { "type": "string" },
+        "timestamp": { "type": "string" },
+        "read": { "type": "boolean" }
+      },
+      "required": ["id", "toEmail", "subject", "body"]
+    },
+    "TriggerMail": {
+      "title": "TriggerMail",
+      "description": "Firebase Extension firestore-send-email mail document queue",
+      "type": "object",
+      "properties": {
+        "to": { "type": "array" },
+        "from": { "type": "string" },
+        "replyTo": { "type": "string" },
+        "message": { "type": "object" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["to", "message"]
+    }
+  },
+  "firestore": {
+    "/studio_users/{userId}": {
+      "schema": "StudioUser",
+      "description": "Collection of registered studio members and role approvals"
+    },
+    "/studio_mails/{mailId}": {
+      "schema": "StudioMail",
+      "description": "Collection of in-app studio mail notifications"
+    },
+    "/mail/{mailId}": {
+      "schema": "TriggerMail",
+      "description": "Queue collection consumed by Firebase firestore-send-email extension"
+    }
+  }
+}

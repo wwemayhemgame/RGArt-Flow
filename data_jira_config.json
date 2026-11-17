@@ -1,0 +1,27 @@
+{
+  "hostUrl": "https://reliancegames.atlassian.net",
+  "email": "ranjeet.patil@zapak.com",
+  "apiToken": "",
+  "defaultProjectKeys": "CRXG, CH, AS, CRICK83, AMTT, AMDI, APT, AQS, AT, B10HTML, BSR, BAR, BWHTML, CNL, CG, CGQS, CIDR, CT, CTP, CCL, CB, DQS, DT, SS2GA, D2QN, DRON, D4, D4QB, DRN5, DSS, DRNU, DYS, EI, EMO, EXD, FS, GI, GPK, GPKQ, GJ, GP, HBKJ, ITBL, ITB, ITBC, IQ, KAN, KD, KBPM, KSS, LOB, LKV2, LKJR, RADHA, RAM, LS, NLS2, LIT, LSC, LS2, LSHTML, LSL, LSS, LST, LKDHHTML, LT, LUDO, MLW, MC, ARTMKT, MTG, MTQ, MT, MM, NLO, NTK, NSHTML5, PR2, PIB, SDKS, SDKTS, PQ, PL, PLQ, PB, PUSS, QTD, QT, RD, RWAR, RP, RS, WB, WRB, RCMC, RN21, RUNKRIS, RQS, RH, SSP, SDKTAS, SERVER, SIMB, RTRO, T20NEW, TCRIC, CS2D, TTT, UAC, UFZ, URF, UZFQA, WCPL, WCCF, CUP16, WRB2, RSWRB, WQN, QA, RSWRB2, WWE, WWEN, WQS, WQT, WQ",
+  "autoSyncOnStatusChange": true,
+  "autoSyncWorklogs": true,
+  "autoPostImagesToJira": true,
+  "projectMappings": [
+    {
+      "jiraProjectKey": "WWE",
+      "studioProjectId": "proj-wwe",
+      "jiraProjectName": "WWE Mayhem"
+    },
+    {
+      "jiraProjectKey": "ARTMKT",
+      "studioProjectId": "proj-art",
+      "jiraProjectName": "Marketing & Live Operations Art"
+    },
+    {
+      "jiraProjectKey": "ART",
+      "studioProjectId": "proj-art",
+      "jiraProjectName": "Marketing & Live Operations Art"
+    }
+  ],
+  "connectionStatus": "disconnected"
+}

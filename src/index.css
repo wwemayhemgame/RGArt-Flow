@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+/* Custom high-visibility scrollbar styling for tables */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Floating scrollbar dark track */
+.floating-scrollbar::-webkit-scrollbar {
+  height: 8px;
+}
+
+.floating-scrollbar::-webkit-scrollbar-track {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+.floating-scrollbar::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 4px;
+}
+
+.floating-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
